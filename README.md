@@ -1,62 +1,71 @@
-# 📦 Importador de Tablas a la BBDD con Python
+#  Mapas Interactivos con Folium para Gestión Pesquera
 
-Este proyecto tiene como objetivo automatizar la carga de datos tabulares (Excel) y geográficos (Shapefiles) en una base de datos SQL Server, además de permitir la ejecución de consultas SQL para análisis y validación.
+Este repositorio tiene como objetivo **aprender, comprender y aplicar** la librería [Folium](https://python-visualization.github.io/folium/) para la creación de **mapas interactivos** enfocados en la gestión pesquera.
 
-## 🗂 Estructura del Proyecto
+Se desarrollan ejemplos prácticos basados en datos reales o simulados, incluyendo:
+- Visualización de rectángulos estadísticos.
+- Representación de capturas y esfuerzo pesquero.
+- Mapas temáticos por especie, temporada o zona.
+- Integración con datos provenientes de **GeoJSON, Shapefiles, CSV y bases de datos SQL**.
 
+##  Estructura del repositorio
 
-Importador-Tablas-a-la-BBDD-con-python/
-├── config/         # Configuraciones (conexiones, parámetros)
-│   └── config.py
-├── data/           # Archivos fuente: Excel y Shapefiles
-├── notebooks/      # Notebooks de ejecución y pruebas
-├── utils/          # Funciones de carga, conexión, consultas SQL
-└── README.md
+```
+folium-gestion-pesquera/  
+│  
+├── README.md # Explicación general del proyecto  
+├── requirements.txt # Librerías necesarias  
+├── data/ # Datos de ejemplo (GeoJSON, CSV, shapefiles)  
+├── notebooks/ # Jupyter Notebooks con ejemplos prácticos  
+│ ├── 01_basicos_folium.ipynb  
+│ ├── 02_capas_geojson.ipynb  
+│ ├── 03_visualizacion_especies.ipynb  
+│ └── 04_interactividad_filtros.ipynb  
+├── scripts/ # Scripts Python reutilizables  
+│ ├── cargar_datos.py  
+│ ├── crear_mapa_base.py  
+│ └── añadir_capas.py  
+└── img/ # Capturas de ejemplo para el README
+````
 
-## 🚀 Funcionalidades Principales
+##  Instalación
 
-- 📥 Importación de pandas DataFrames a SQL Server.
-- 🌍 Carga de archivos Shapefile a SQL Server (con geometría).
-- 🔎 Ejecución de consultas SQL y visualización con Pandas.
-- 🔧 Modularizado para facilitar el mantenimiento y la reutilización.
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/usuario/folium-gestion-pesquera.git
+cd folium-gestion-pesquera
+````
 
-## 🧰 Tecnologías Usadas
-
-- Python 3.8+
-- Pandas, Geopandas
-- SQLAlchemy o pyodbc
-- OS, SYS, dotenv
-- Jupyter Notebooks
-
-## ⚙️ Configuración Inicial
-
-Configura tu conexión a SQL Server en `config/config.py` o usando variables de entorno (`.env`):
-
-```python
-SQL_CONFIG = {
-    "driver": "ODBC Driver 17 for SQL Server",
-    "server": "TU_SERVIDOR",
-    "database": "TU_BBDD",
-    "username": "usuario",
-    "password": "contraseña"
-}
+2. **Crear un entorno virtual (opcional pero recomendado)**
+```bash
+python -m venv venv
+source venv/bin/activate   # Linux / Mac
+venv\Scripts\activate      # Windows
 ```
 
-## 🧪 Ejemplo de Uso
-
-```python
-# Leer Excel
-df = pd.read_excel("data/tabla_ejemplo.xlsx")
-
-# Subir a SQL Server
-importar_dataframe_a_sqlserver(df, nombre_tabla="tabla_destino")
-
-# Ejecutar consulta
-df_resultado = ejecutar_consulta_sql("SELECT * FROM tabla_destino")
+3. **Instalar dependencias**
+```bash
+pip install -r requirements.txt
 ```
 
-## 📌 Notas
+## Contenido de aprendizaje
 
-* Las rutas se manejan con `os.path` para asegurar compatibilidad cross-platform.
-* Los notebooks ubicados en `notebooks/` muestran ejemplos prácticos y trazas de ejecución.
+|Notebook|Tema|Descripción|
+|---|---|---|
+|01_basicos_folium.ipynb|Mapa base|Creación de mapas, tiles y centrado|
+|02_capas_geojson.ipynb|Capas vectoriales|Añadir polígonos y colorearlos según datos|
+|03_visualizacion_especies.ipynb|Mapas temáticos|Colorear por especie, biomasa o esfuerzo|
+|04_interactividad_filtros.ipynb|Filtros y controles|Añadir `LayerControl`, popups y leyendas|
+
+## Tecnologías y librerías utilizadas
+
+- [Folium](https://python-visualization.github.io/folium/)
+- [GeoPandas](https://geopandas.org/)
+- [Pandas](https://pandas.pydata.org/)
+- [Shapely](https://shapely.readthedocs.io/)
+- [Jupyter Notebook](https://jupyter.org/)
+
+## Ejemplo de salida
+
+![Ejemplo de mapa](img/ejemplo_mapa.png)
 
