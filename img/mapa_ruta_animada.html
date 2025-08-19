@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6bab2c7a53aa22f74141bfe24412862a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6bab2c7a53aa22f74141bfe24412862a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6bab2c7a53aa22f74141bfe24412862a = L.map(
+                "map_6bab2c7a53aa22f74141bfe24412862a",
+                {
+                    center: [27.997405464584762, -17.239135059150488],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b3e5023ac1f121cf6d01f2b210a80f10 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b3e5023ac1f121cf6d01f2b210a80f10.addTo(map_6bab2c7a53aa22f74141bfe24412862a);
+        
+    
+            var poly_line_be566f2869a3bd61b758088abe63f5da = L.polyline(
+                [[28.1386661529541, -16.796667098999], [28.2199993133545, -16.9753341674805], [28.3566665649414, -17.1946659088135], [28.3059997558594, -17.4153327941895], [28.2140007019043, -17.5960006713867], [28.1480007171631, -17.6013336181641], [28.0833339691162, -17.5906658172607], [28.046667098999, -17.5879993438721], [28.011999130249, -17.5906658172607], [28.0046672821045, -17.5813331604004], [27.9966659545898, -17.5779991149902], [27.945333480835, -17.5353336334228], [27.9893341064453, -17.5499992370605], [28.0613327026367, -17.5533332824707], [28.1253337860107, -17.5513324737549], [28.1866664886475, -17.5413341522217], [28.2266674041748, -17.5473327636719], [28.267333984375, -17.5900001525879], [28.2953338623047, -17.5993328094482], [28.2466659545898, -17.593334197998], [28.2266674041748, -17.5900001525879], [28.2140007019043, -17.5979995727539], [28.2006664276123, -17.6119995117188], [28.1299991607666, -17.6173324584961], [28.0513324737549, -17.6133327484131], [27.9773330688477, -17.5713329315186], [28.0259990692139, -17.5440006256104], [28.0380001068115, -17.5106658935547], [28.0113334655762, -17.4326667785645], [27.9839992523193, -17.3706665039062], [27.9466667175293, -17.3353328704834], [27.8993339538574, -17.2953338623047], [27.8953342437744, -17.2586669921875], [27.8726673126221, -17.2266674041748], [27.8460006713867, -17.1906661987305], [27.7560005187988, -17.1766662597656], [27.8233337402344, -17.1520004272461], [27.8846664428711, -17.1466674804688], [27.906665802002, -17.1840000152588], [27.9093341827393, -17.2040004730225], [27.92799949646, -17.2853336334228], [27.941333770752, -17.2779998779297], [27.945333480835, -17.2679996490478], [27.9073333740234, -17.1906661987305], [27.9106674194336, -17.1599998474121], [27.8579998016357, -17.1340007781982], [27.792667388916, -17.1180000305176], [27.7293338775635, -17.1180000305176], [27.7053337097168, -17.0966663360596], [27.7719993591309, -17.1060009002686], [27.8426666259766, -17.1459999084473], [27.8853340148926, -17.2013339996338], [27.9206657409668, -17.2299995422363], [27.9213333129883, -17.2466659545898], [27.9366664886475, -17.2593326568604], [27.9373340606689, -17.2600002288818], [27.9200000762939, -17.2006664276123], [27.8853340148926, -17.1499996185303], [27.9020004272461, -17.1013336181641], [27.92799949646, -17.0673332214355], [27.9673328399658, -17.0406665802002], [27.974666595459, -16.9979991912842], [27.9973335266113, -16.9633331298828], [28.0306663513184, -16.974666595459], [28.0340003967285, -16.949333190918], [27.9946670532227, -16.8866672515869], [27.9860000610352, -16.9006671905518], [28.0226669311523, -16.96266746521], [28.0266666412354, -16.9393329620361], [28.0319995880127, -16.7193336486816], [28.0233325958252, -16.7213325500488], [27.9713325500488, -16.5953330993652], [27.8859996795654, -16.2779998779297], [27.82200050354, -15.9499998092651]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_6bab2c7a53aa22f74141bfe24412862a);
+        
+    
+            poly_line_be566f2869a3bd61b758088abe63f5da.bindTooltip(
+                `<div>
+                     Ruta del buque
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ebf54501d8e079c0d4d8ca3ba29e5945 = L.marker(
+                [28.1386661529541, -16.796667098999],
+                {
+}
+            ).addTo(map_6bab2c7a53aa22f74141bfe24412862a);
+        
+    
+            var icon_13690c9099e1e9d77ef2d7dafef83f60 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0e8bf42370ae6a60cdb165b27c6a5029 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b2970d67eaf0c4b2ce5e3232e2ae537 = $(`<div id="html_2b2970d67eaf0c4b2ce5e3232e2ae537" style="width: 100.0%; height: 100.0%;"><b>Primer punto</b><br>Vel: 9.6 nudos<br>Rumbo: 334</div>`)[0];
+                popup_0e8bf42370ae6a60cdb165b27c6a5029.setContent(html_2b2970d67eaf0c4b2ce5e3232e2ae537);
+            
+        
+
+        marker_ebf54501d8e079c0d4d8ca3ba29e5945.bindPopup(popup_0e8bf42370ae6a60cdb165b27c6a5029)
+        ;
+
+        
+    
+    
+            marker_ebf54501d8e079c0d4d8ca3ba29e5945.bindTooltip(
+                `<div>
+                     Inicio
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ebf54501d8e079c0d4d8ca3ba29e5945.setIcon(icon_13690c9099e1e9d77ef2d7dafef83f60);
+            
+    
+            var marker_a12908c4fb0e0f53a227a99c7f2204a0 = L.marker(
+                [27.82200050354, -15.9499998092651],
+                {
+}
+            ).addTo(map_6bab2c7a53aa22f74141bfe24412862a);
+        
+    
+            var icon_ac790ba5a5c571cf1822e0a889b9e946 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f9ed7463b5e82cfc07cf2bb9493d863 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37c06ef3ae28891769db36a1c817ffbe = $(`<div id="html_37c06ef3ae28891769db36a1c817ffbe" style="width: 100.0%; height: 100.0%;"><b>Último punto</b><br>Vel: 8.4 nudos<br>Rumbo: 111</div>`)[0];
+                popup_6f9ed7463b5e82cfc07cf2bb9493d863.setContent(html_37c06ef3ae28891769db36a1c817ffbe);
+            
+        
+
+        marker_a12908c4fb0e0f53a227a99c7f2204a0.bindPopup(popup_6f9ed7463b5e82cfc07cf2bb9493d863)
+        ;
+
+        
+    
+    
+            marker_a12908c4fb0e0f53a227a99c7f2204a0.bindTooltip(
+                `<div>
+                     Fin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a12908c4fb0e0f53a227a99c7f2204a0.setIcon(icon_ac790ba5a5c571cf1822e0a889b9e946);
+            
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY-MM-DD HH:mm:ss");
+                }
+            });
+            map_6bab2c7a53aa22f74141bfe24412862a.timeDimension = L.timeDimension(
+                {
+                    period: "PT1H",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {
+  "position": "bottomleft",
+  "minSpeed": 0.1,
+  "maxSpeed": 1,
+  "autoPlay": true,
+  "loopButton": true,
+  "timeSliderDragUpdate": true,
+  "speedSlider": true,
+  "playerOptions": {
+  "transitionTime": 200,
+  "loop": false,
+  "startOver": true,
+},
+}
+            );
+            map_6bab2c7a53aa22f74141bfe24412862a.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.796667098999, 28.1386661529541]}, "properties": {"time": "2022-09-13 07:01:00.0010000", "style": {"color": "red"}, "icon": "circle", "popup": "Vel: 9.6 nudos<br>Rumbo: 334<br>Fecha: 2022-09-13 07:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.9753341674805, 28.2199993133545]}, "properties": {"time": "2022-09-13 11:01:00.0010000", "style": {"color": "red"}, "icon": "circle", "popup": "Vel: 5.2 nudos<br>Rumbo: 328<br>Fecha: 2022-09-13 11:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1946659088135, 28.3566665649414]}, "properties": {"time": "2022-09-13 13:01:00.0010000", "style": {"color": "red"}, "icon": "circle", "popup": "Vel: 6.8 nudos<br>Rumbo: 257<br>Fecha: 2022-09-13 13:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.4153327941895, 28.3059997558594]}, "properties": {"time": "2022-09-13 15:02:00.0010000", "style": {"color": "red"}, "icon": "circle", "popup": "Vel: 7.4 nudos<br>Rumbo: 243<br>Fecha: 2022-09-13 15:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5960006713867, 28.2140007019043]}, "properties": {"time": "2022-09-13 17:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.2 nudos<br>Rumbo: 182<br>Fecha: 2022-09-13 17:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.6013336181641, 28.1480007171631]}, "properties": {"time": "2022-09-13 19:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.2 nudos<br>Rumbo: 174<br>Fecha: 2022-09-13 19:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5906658172607, 28.0833339691162]}, "properties": {"time": "2022-09-13 21:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.0 nudos<br>Rumbo: 149<br>Fecha: 2022-09-13 21:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5879993438721, 28.046667098999]}, "properties": {"time": "2022-09-13 23:02:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.2 nudos<br>Rumbo: 186<br>Fecha: 2022-09-13 23:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5906658172607, 28.011999130249]}, "properties": {"time": "2022-09-14 01:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.0 nudos<br>Rumbo: 149<br>Fecha: 2022-09-14 01:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5813331604004, 28.0046672821045]}, "properties": {"time": "2022-09-14 03:02:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 0.4 nudos<br>Rumbo: 84<br>Fecha: 2022-09-14 03:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5779991149902, 27.9966659545898]}, "properties": {"time": "2022-09-14 05:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 0.8 nudos<br>Rumbo: 139<br>Fecha: 2022-09-14 05:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5353336334228, 27.945333480835]}, "properties": {"time": "2022-09-14 07:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.8 nudos<br>Rumbo: 160<br>Fecha: 2022-09-14 07:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5499992370605, 27.9893341064453]}, "properties": {"time": "2022-09-14 09:02:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.6 nudos<br>Rumbo: 326<br>Fecha: 2022-09-14 09:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5533332824707, 28.0613327026367]}, "properties": {"time": "2022-09-14 11:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.6 nudos<br>Rumbo: 183<br>Fecha: 2022-09-14 11:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5513324737549, 28.1253337860107]}, "properties": {"time": "2022-09-14 13:02:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.2 nudos<br>Rumbo: 0<br>Fecha: 2022-09-14 13:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5413341522217, 28.1866664886475]}, "properties": {"time": "2022-09-14 15:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.8 nudos<br>Rumbo: 42<br>Fecha: 2022-09-14 15:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5473327636719, 28.2266674041748]}, "properties": {"time": "2022-09-14 17:02:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.0 nudos<br>Rumbo: 333<br>Fecha: 2022-09-14 17:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5900001525879, 28.267333984375]}, "properties": {"time": "2022-09-14 19:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.6 nudos<br>Rumbo: 324<br>Fecha: 2022-09-14 19:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5993328094482, 28.2953338623047]}, "properties": {"time": "2022-09-14 21:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.2 nudos<br>Rumbo: 166<br>Fecha: 2022-09-14 21:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.593334197998, 28.2466659545898]}, "properties": {"time": "2022-09-14 23:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 0.8 nudos<br>Rumbo: 169<br>Fecha: 2022-09-14 23:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5900001525879, 28.2266674041748]}, "properties": {"time": "2022-09-15 01:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 0.4 nudos<br>Rumbo: 120<br>Fecha: 2022-09-15 01:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5979995727539, 28.2140007019043]}, "properties": {"time": "2022-09-15 03:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 0.6 nudos<br>Rumbo: 218<br>Fecha: 2022-09-15 03:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.6119995117188, 28.2006664276123]}, "properties": {"time": "2022-09-15 05:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.8 nudos<br>Rumbo: 288<br>Fecha: 2022-09-15 05:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.6173324584961, 28.1299991607666]}, "properties": {"time": "2022-09-15 07:02:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.4 nudos<br>Rumbo: 174<br>Fecha: 2022-09-15 07:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.6133327484131, 28.0513324737549]}, "properties": {"time": "2022-09-15 09:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.8 nudos<br>Rumbo: 129<br>Fecha: 2022-09-15 09:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5713329315186, 27.9773330688477]}, "properties": {"time": "2022-09-15 11:02:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.2 nudos<br>Rumbo: 106<br>Fecha: 2022-09-15 11:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5440006256104, 28.0259990692139]}, "properties": {"time": "2022-09-15 13:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.8 nudos<br>Rumbo: 10<br>Fecha: 2022-09-15 13:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.5106658935547, 28.0380001068115]}, "properties": {"time": "2022-09-15 15:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.0 nudos<br>Rumbo: 174<br>Fecha: 2022-09-15 15:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.4326667785645, 28.0113334655762]}, "properties": {"time": "2022-09-15 17:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.2 nudos<br>Rumbo: 155<br>Fecha: 2022-09-15 17:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.3706665039062, 27.9839992523193]}, "properties": {"time": "2022-09-15 19:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.6 nudos<br>Rumbo: 215<br>Fecha: 2022-09-15 19:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.3353328704834, 27.9466667175293]}, "properties": {"time": "2022-09-15 21:02:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.6 nudos<br>Rumbo: 149<br>Fecha: 2022-09-15 21:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2953338623047, 27.8993339538574]}, "properties": {"time": "2022-09-15 23:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.2 nudos<br>Rumbo: 84<br>Fecha: 2022-09-15 23:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2586669921875, 27.8953342437744]}, "properties": {"time": "2022-09-16 01:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 0.6 nudos<br>Rumbo: 68<br>Fecha: 2022-09-16 01:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2266674041748, 27.8726673126221]}, "properties": {"time": "2022-09-16 03:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.6 nudos<br>Rumbo: 128<br>Fecha: 2022-09-16 03:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1906661987305, 27.8460006713867]}, "properties": {"time": "2022-09-16 05:02:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.0 nudos<br>Rumbo: 141<br>Fecha: 2022-09-16 05:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1766662597656, 27.7560005187988]}, "properties": {"time": "2022-09-16 07:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 4.4 nudos<br>Rumbo: 169<br>Fecha: 2022-09-16 07:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1520004272461, 27.8233337402344]}, "properties": {"time": "2022-09-16 09:02:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 3.2 nudos<br>Rumbo: 20<br>Fecha: 2022-09-16 09:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1466674804688, 27.8846664428711]}, "properties": {"time": "2022-09-16 11:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.8 nudos<br>Rumbo: 333<br>Fecha: 2022-09-16 11:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1840000152588, 27.906665802002]}, "properties": {"time": "2022-09-16 12:27:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.6 nudos<br>Rumbo: 294<br>Fecha: 2022-09-16 12:27:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2040004730225, 27.9093341827393]}, "properties": {"time": "2022-09-16 13:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.4 nudos<br>Rumbo: 272<br>Fecha: 2022-09-16 13:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2853336334228, 27.92799949646]}, "properties": {"time": "2022-09-16 15:02:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.2 nudos<br>Rumbo: 323<br>Fecha: 2022-09-16 15:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2779998779297, 27.941333770752]}, "properties": {"time": "2022-09-16 17:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.0 nudos<br>Rumbo: 147<br>Fecha: 2022-09-16 17:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2679996490478, 27.945333480835]}, "properties": {"time": "2022-09-16 19:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.4 nudos<br>Rumbo: 121<br>Fecha: 2022-09-16 19:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1906661987305, 27.9073333740234]}, "properties": {"time": "2022-09-16 21:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 3.2 nudos<br>Rumbo: 74<br>Fecha: 2022-09-16 21:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1599998474121, 27.9106674194336]}, "properties": {"time": "2022-09-16 23:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.0 nudos<br>Rumbo: 133<br>Fecha: 2022-09-16 23:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1340007781982, 27.8579998016357]}, "properties": {"time": "2022-09-17 01:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.8 nudos<br>Rumbo: 189<br>Fecha: 2022-09-17 01:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1180000305176, 27.792667388916]}, "properties": {"time": "2022-09-17 03:02:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.8 nudos<br>Rumbo: 194<br>Fecha: 2022-09-17 03:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1180000305176, 27.7293338775635]}, "properties": {"time": "2022-09-17 05:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.4 nudos<br>Rumbo: 197<br>Fecha: 2022-09-17 05:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.0966663360596, 27.7053337097168]}, "properties": {"time": "2022-09-17 07:02:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.4 nudos<br>Rumbo: 336<br>Fecha: 2022-09-17 07:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1060009002686, 27.7719993591309]}, "properties": {"time": "2022-09-17 09:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.4 nudos<br>Rumbo: 346<br>Fecha: 2022-09-17 09:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1459999084473, 27.8426666259766]}, "properties": {"time": "2022-09-17 11:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 3.6 nudos<br>Rumbo: 249<br>Fecha: 2022-09-17 11:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2013339996338, 27.8853340148926]}, "properties": {"time": "2022-09-17 13:02:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 4.0 nudos<br>Rumbo: 13<br>Fecha: 2022-09-17 13:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2299995422363, 27.9206657409668]}, "properties": {"time": "2022-09-17 15:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.0 nudos<br>Rumbo: 305<br>Fecha: 2022-09-17 15:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2466659545898, 27.9213333129883]}, "properties": {"time": "2022-09-17 17:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.8 nudos<br>Rumbo: 15<br>Fecha: 2022-09-17 17:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2593326568604, 27.9366664886475]}, "properties": {"time": "2022-09-17 19:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.6 nudos<br>Rumbo: 325<br>Fecha: 2022-09-17 19:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2600002288818, 27.9373340606689]}, "properties": {"time": "2022-09-17 19:02:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 0.8 nudos<br>Rumbo: 326<br>Fecha: 2022-09-17 19:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.2006664276123, 27.9200000762939]}, "properties": {"time": "2022-09-17 21:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 3.2 nudos<br>Rumbo: 142<br>Fecha: 2022-09-17 21:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1499996185303, 27.8853340148926]}, "properties": {"time": "2022-09-17 23:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.4 nudos<br>Rumbo: 77<br>Fecha: 2022-09-17 23:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.1013336181641, 27.9020004272461]}, "properties": {"time": "2022-09-18 01:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.0 nudos<br>Rumbo: 102<br>Fecha: 2022-09-18 01:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.0673332214355, 27.92799949646]}, "properties": {"time": "2022-09-18 03:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.0 nudos<br>Rumbo: 17<br>Fecha: 2022-09-18 03:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.0406665802002, 27.9673328399658]}, "properties": {"time": "2022-09-18 05:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 0.8 nudos<br>Rumbo: 44<br>Fecha: 2022-09-18 05:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.9979991912842, 27.974666595459]}, "properties": {"time": "2022-09-18 07:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.2 nudos<br>Rumbo: 30<br>Fecha: 2022-09-18 07:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.9633331298828, 27.9973335266113]}, "properties": {"time": "2022-09-18 09:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 3.8 nudos<br>Rumbo: 127<br>Fecha: 2022-09-18 09:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.974666595459, 28.0306663513184]}, "properties": {"time": "2022-09-18 11:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.2 nudos<br>Rumbo: 334<br>Fecha: 2022-09-18 11:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.949333190918, 28.0340003967285]}, "properties": {"time": "2022-09-18 13:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 1.6 nudos<br>Rumbo: 105<br>Fecha: 2022-09-18 13:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.8866672515869, 27.9946670532227]}, "properties": {"time": "2022-09-18 15:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.6 nudos<br>Rumbo: 131<br>Fecha: 2022-09-18 15:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.9006671905518, 27.9860000610352]}, "properties": {"time": "2022-09-18 17:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 3.0 nudos<br>Rumbo: 298<br>Fecha: 2022-09-18 17:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.96266746521, 28.0226669311523]}, "properties": {"time": "2022-09-18 19:01:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.4 nudos<br>Rumbo: 346<br>Fecha: 2022-09-18 19:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.9393329620361, 28.0266666412354]}, "properties": {"time": "2022-09-18 21:02:00.0010000", "style": {"color": "orange"}, "icon": "circle", "popup": "Vel: 2.0 nudos<br>Rumbo: 147<br>Fecha: 2022-09-18 21:02:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.7193336486816, 28.0319995880127]}, "properties": {"time": "2022-09-18 23:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 0.4 nudos<br>Rumbo: 279<br>Fecha: 2022-09-18 23:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.7213325500488, 28.0233325958252]}, "properties": {"time": "2022-09-19 01:01:00.0010000", "style": {"color": "blue"}, "icon": "circle", "popup": "Vel: 0.0 nudos<br>Rumbo: 0<br>Fecha: 2022-09-19 01:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.5953330993652, 27.9713325500488]}, "properties": {"time": "2022-09-19 19:01:00.0010000", "style": {"color": "red"}, "icon": "circle", "popup": "Vel: 8.8 nudos<br>Rumbo: 106<br>Fecha: 2022-09-19 19:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.2779998779297, 27.8859996795654]}, "properties": {"time": "2022-09-19 21:01:00.0010000", "style": {"color": "red"}, "icon": "circle", "popup": "Vel: 8.6 nudos<br>Rumbo: 112<br>Fecha: 2022-09-19 21:01:00.0010000"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-15.9499998092651, 27.82200050354]}, "properties": {"time": "2022-09-19 23:01:00.0010000", "style": {"color": "red"}, "icon": "circle", "popup": "Vel: 8.4 nudos<br>Rumbo: 111<br>Fecha: 2022-09-19 23:01:00.0010000"}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_b72c2a8181a992b364d4569c22f46bac = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: undefined,
+                }
+            ).addTo(map_6bab2c7a53aa22f74141bfe24412862a);
+        
+</script>
+</html>
